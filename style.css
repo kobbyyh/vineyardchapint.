@@ -1,0 +1,212 @@
+ body {
+     padding-top: 80px;
+     /* Adds space to avoid content overlapping with the fixed navbar */
+ }
+
+ .navbar {
+     position: fixed;/* Fixes the navbar to the top */
+     top: 0;/* Ensures it's aligned at the very top */
+     width: 100%;/* Stretches the navbar to cover the full width */
+     z-index: 1030;/* Keeps it above other content */
+     background-color: rgb(193, 191, 191);/* Ensures the navbar has a background */
+     box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);/* Adds a subtle shadow for clarity */
+ }
+
+ ul.Navigation_bar {
+    /* background-color: rgb(152, 133, 133); */
+    /* padding: 10px;
+    margin: 1px;
+    border: 1px; */
+    border-radius: 5px;
+    font-weight: 500;
+ }
+ ul.Navigation_bar a:hover{
+  color: #007bff;
+ }
+
+ .main_text:hover{
+  color: aqua;
+  
+ }
+
+ .Navigation_bar {
+    list-style: none; /* Removes default list styling */
+    padding: 0; /* Removes padding from the list */
+    margin: 0; /* Removes margin from the list */
+    display: flex; /* Aligns items horizontally */
+    justify-content: flex-end; /* Aligns items to the right */
+    align-items: center; /* Centers items vertically */
+  }
+  
+  .Navigation_bar .nav-item {
+    display: flex; /* Ensures proper alignment of the text and separator */
+    align-items: center; /* Centers the content vertically */
+    margin: 0 10px; /* Adds horizontal spacing between items */
+    position: relative; /* Enables pseudo-element positioning */
+  }
+  
+  .Navigation_bar .nav-link {
+    padding: 10px 20px; /* Adds padding inside the buttons */
+    border-radius: 50px; /* Rounds the buttons */
+    font-weight: 500; /* Semi-bold font */
+    color: white; /* Text color */
+    text-decoration: none; /* Removes underline from links */
+    display: inline-block; /* Ensures proper padding application */
+  }
+  
+  .Navigation_bar .nav-item::after {
+    content: '|'; /* Adds the vertical bar */
+    color: white; /* Matches the bar color with the text */
+    font-weight: bold; /* Makes the bar bold for visibility */
+    margin-left: 10px; /* Adds spacing between the item and the bar */
+  }
+  
+  .Navigation_bar .nav-item:last-child::after {
+    content: ''; /* Removes the vertical bar after the last item */
+  }
+  
+
+ #home {
+     height: 100vh;
+     position: relative;
+ }
+
+ .carousel-item img {
+     height: 100vh;
+     object-fit: cover;
+     filter: brightness(60%);
+ }
+
+ .carousel-overlay {
+     z-index: 2;
+     background: rgba(0, 0, 0, 0.5);
+ }
+
+ /* ----------------------- */
+ #pastor-message {
+    background-color: #f8f9fa; /* Light background for the section */
+  }
+
+  .pastor-img {
+    width: 450px; /* Adjust image size */
+    height: 350px;
+    object-fit: cover;
+    border-radius: 10px;
+    border: 1px solid white; /* White border for better contrast */
+    position: relative;
+    z-index: 0; /* Ensures it stays above the cards */
+    transform: translate(0, -20px);
+    box-shadow: 0 4px 6px rgba(10, 10, 10, 0.1);/* Adds a subtle shadow for clarity */
+
+  }
+ 
+  .pastor-img {
+    width: 380px; /* Image width */
+    height: 450px; /* Image height */
+    object-fit: cover; /* Ensures the image covers the area */
+    border-radius: 10px; /* Rounded corners */
+    border: 1px solid white; /* White border for better contrast */
+    
+    /* Strong shadow effect */
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.8), 0 20px 60px rgba(0, 0, 0, 0.6); /* Apply strong shadow */
+    transition: box-shadow 0.3s ease-in-out; /* Smooth transition for shadow */
+  }
+  
+  img .pastor-img:hover {
+    box-shadow: 0 50px 60px rgba(0, 0, 0, 0.8), 0 30px 80px rgba(0, 0, 0, 0.6); /* More intense shadow on hover */
+  }
+  
+  
+  #pastor-message h2 {
+    color: #343a40; /* Darker color for the heading */
+  }
+  
+  #pastor-message p {
+    color: #495057; /* Medium-dark color for the text */
+    line-height: 1.6;
+  }
+  /* Default state of the container */
+.container.hover-zoom {
+    transition: transform 2s ease-in-out, box-shadow 2s ease-in-out; /* Add box shadow transition */
+  }
+  
+  /* Hover state */
+  .container.hover-zoom:hover {
+    transform: scale(1.1); /* Zoom in */
+    box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Add subtle shadow to emphasize zoom */
+  }
+ 
+
+  /* ---------------- */
+  #gallery {
+    padding: 50px 0;
+    background-color: white;
+  }
+  
+  .gallery-scroll-wrapper {
+    overflow-x: hidden; /* Hide overflow for smooth scrolling */
+    white-space: nowrap;
+    position: relative;
+  }
+  
+  .gallery-scroll {
+    display: flex;
+    transition: transform 1s ease; /* Smooth transition for automatic slide */
+  }
+  
+  .gallery-scroll .col-md-4 {
+    display: inline-block;
+    margin-right: 15px;
+  }
+  
+  .gallery-scroll img {
+    width: 100%;
+    height: auto;
+    object-fit: cover;
+    border-radius: 10px;
+    cursor: pointer;
+  }
+  
+  /* ------------------------ */
+  .card-bg {
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    height: 250px; /* Adjust the height of the card */
+    color: white; /* Make text color white for contrast */
+  }
+  
+  .deno card-body {
+    position: absolute;
+    top: 50%; /* Position the content in the center */
+    left: 50%;
+    transform: translate(-50%, -50%); /* Center the content horizontally and vertically */
+    text-align: center;
+    z-index: 1; /* Ensure text stays above the background */
+  }
+  
+  .card-title, .card-text {
+    z-index: 1; /* Ensure text stays above the background */
+    color: rgb(0, 0, 0); /* Ensure text is visible on the image */
+  }
+  
+  .card-text {
+    font-size: 1.2rem;
+    font-weight: 400;
+  }
+  
+  .styled-hr {
+    width: 10%; /* Initial width of the HR */
+    margin: 20px auto; /* Centers the HR */
+    border: 1px solid #6c757d; /* Light gray border color */
+    border-radius: 5px; /* Optional rounded corners */
+    transition: width 0.5s ease-in-out, border-color 0.3s ease-in-out; /* Smooth transition */
+  }
+  
+  .hover-text:hover + .styled-hr {
+    border: 3px solid #6c757d; /* Light gray border color */
+    width: 30%; /* Expands the HR width on hover */
+    border-color: #007bff; /* Changes the border color to blue on hover */
+  }
+  
+  

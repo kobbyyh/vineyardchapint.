@@ -1,0 +1,278 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Vineyard Chapel International</title>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
+  <link rel="stylesheet" href="./style.css">
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.bundle.min.js"></script>
+  <script src="script.js" defer></script>
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons/font/bootstrap-icons.css" rel="stylesheet">
+
+</head>
+
+<body>
+
+  <!-- Navbar -->
+  <!-- <nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm pt-3"> -->
+  <nav class="navbar navbar-expand-lg pt-3">
+    <div class="navbar_container container">
+      <img src="./images/church_logo.png" style="width: 60px;" alt="">
+      <a class="navbar-brand fw-bold" style="color: rgb(35, 36, 36);" href="#">Vineyard Chapel International</a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="Navigation_bar navbar-nav ms-auto">
+          <li class="nav-item"><a class="nav-link" href="#home">Home</a></li>
+          <li class="nav-item"><a class="nav-link" href="#about">About Us</a></li>
+          <li class="nav-item"><a class="nav-link" href="#services">Outline</a></li>
+          <li class="nav-item"><a class="nav-link" href="#gallery">Gallery</a></li>
+          <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section with Carousel -->
+  <section id="home" class="position-relative">
+    <!-- Background Carousel -->
+    <div id="heroCarousel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="./images/1.jpg" class="d-block w-100" alt="Slide 1">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/2.jpg" class="d-block w-100" alt="Slide 2">
+        </div>
+        <div class="carousel-item">
+          <img src="./images/3.jpg" class="d-block w-100" alt="Slide 3">
+        </div>
+      </div>
+    </div>
+
+    <!-- Content Overlay -->
+    <div
+      class="carousel-overlay position-absolute top-0 start-0 w-100 h-100 d-flex flex-column justify-content-center align-items-center text-center text-white">
+      <h1 class="main_text display-4 fw-bold" id="dynamicText">
+      </h1> <br> 
+      <p style="color: aquamarine;">(The Holy Ghost Temple)</p>
+
+      <p class="lead">Join Us In Worship, Fellowship, And Spiritual Growth.</p>
+    </div>
+    <script>
+      function printTextOneByOne(text, i = 0) {
+        document.getElementById("dynamicText").textContent += text[i];
+        if (i < text.length - 1) {
+          setTimeout(() => printTextOneByOne(text, i + 1), 100);
+        } else {
+          setTimeout(() => {
+            document.getElementById("dynamicText").textContent = "";
+            printTextOneByOne(text);
+          }, 3000);
+        }
+      }
+
+      const name = "Welcome To Vineyard Chapel International";
+      printTextOneByOne(name);
+
+    </script>
+  </section>
+
+  <section id="pastor-message" class="py-5 ">
+    <div class="container hover-zoom">
+      <div class="row align-items-center">
+
+        <section id="about" class="py-5 bg-white">
+          <div class="container text-center">
+            <h2 class="fw-bold hover-text mb-4">Message from the Head Pastor</h2>
+            <hr class="styled-hr">
+          </div>
+        </section>
+        <div class="col-md-6 position-relative text-center">
+          <img src="./images/10.jpg" class="pastor-img shadow " alt="Pastor's Photo">
+        </div>
+
+        <!-- Message Section -->
+        <div class="col-md-6">
+          <h3 style="font-size: xx-large;">Rev Patrick Kolanbik</h3>
+          <!-- <h2 class="fw-bold mb-4">Message from the Head Pastor</h2> -->
+          <p class="lead">
+
+            Welcome to Vineyard Chapel International! Our mission is to inspire faith, transform lives,
+            and guide you on your spiritual journey. Join us as we grow together in God’s grace.
+            As your pastor, I am here to support and guide you. Let us worship together, embrace love,
+            and build a strong community rooted in Christ. God bless you!
+
+          </p>
+
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- Services Section -->
+  <section id="services" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="fw-bold hover-text text-center mb-4">Our Services</h2>
+      <hr class="styled-hr">
+      <div class="row g-4">
+        <div class="col-md-4 text-center">
+          <div class="deno card shadow">
+            <div class="deno card-body bg-light hover-zoom">
+              <h5 class="deno card-title fw-bold">Sunday Worship</h5>
+              <p class="card-text">10:00 AM - 12:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="deno card shadow">
+            <div class="deno card-body bg-light hover-zoom">
+              <h5 class="deno card-title fw-bold">Bible Study</h5>
+              <p class="card-text">Wednesdays 6:00 PM</p>
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 text-center">
+          <div class="deno card shadow">
+            <div class="deno card-body bg-light hover-zoom">
+              <h5 class="deno card-title fw-bold">Youth Fellowship</h5>
+              <p class="card-text">Saturdays 4:00 PM</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Gallery Section -->
+  <section id="gallery" class="py-5 bg-white">
+    <div class="container">
+      <h2 class="fw-bold hover-text text-center mb-4">Photo Gallery</h2>
+      <hr class="styled-hr">
+      <div class="gallery-scroll-wrapper">
+        <div class="gallery-scroll">
+          <div class="col-md-4">
+            <img src="./images/4.jpg" alt="Gallery Image" class="img-fluid rounded shadow hover-zoom">
+          </div>
+          <div class="col-md-4">
+            <img src="./images/5.jpg" alt="Gallery Image" class="img-fluid rounded shadow hover-zoom">
+          </div>
+          <div class="col-md-4">
+            <img src="./images/6.jpg" alt="Gallery Image" class="img-fluid rounded shadow hover-zoom">
+          </div>
+          <div class="col-md-4">
+            <img src="./images/7.jpg" alt="Gallery Image" class="img-fluid rounded shadow hover-zoom">
+          </div>
+          <div class="col-md-4">
+            <img src="./images/8.jpg" alt="Gallery Image" class="img-fluid rounded shadow hover-zoom">
+          </div>
+          <div class="col-md-4">
+            <img src="./images/9.jpg" alt="Gallery Image" class="img-fluid rounded shadow hover-zoom">
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <section id="Denominations" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="fw-bold hover-text text-center mb-4">Denominations</h2>
+      <hr class="styled-hr">
+      <div class="row g-4">
+        <!-- Adult Church Card -->
+        <div class="col-md-4 text-center hover-zoom">
+          <div class="card shadow card-bg" style="background-image: url('./images/15.jpg');">
+            <div class="card-body text-overlay"></div>
+          </div>
+          <h5 class="card-title fw-bold">Educative Adult Church</h5>
+          <!-- <p class="card-text">10:00 AM - 12:00 PM</p> -->
+        </div>
+        <!-- Youth Service Card -->
+        <div class="col-md-4 text-center hover-zoom">
+          <div class="card shadow card-bg" style="background-image: url('./images/13.jpg');">
+            <div class="card-body text-overlay">
+
+            </div>
+          </div>
+          <h5 class="card-title fw-bold">Vibrant Youth Service</h5>
+          <!-- <p class="card-text">Wednesdays 6:00 PM</p> -->
+        </div>
+        <!-- Children Service Card -->
+        <div class="col-md-4 text-center hover-zoom">
+          <div class="card shadow card-bg" style="background-image: url('./images/12.jpg');">
+            <div class="card-body text-overlay">
+
+            </div>
+          </div>
+          <h5 class="card-title fw-bold">Children Service</h5>
+          <!-- <p class="card-text">Saturdays 4:00 PM</p> -->
+        </div>
+      </div>
+    </div>
+
+  </section>
+
+
+
+
+  <!-- Contact Section -->
+  <section id="contact" class="py-5 bg-light">
+    <div class="container">
+      <h2 class="fw-bold hover-text text-center mb-4">Contact Us</h2>
+      <hr class="styled-hr">
+      <div class="row">
+        <div class="col-md-6">
+          <form id="contact-form">
+            <div class="mb-3">
+              <label for="name" class="form-label">Name</label>
+              <input type="text" class="form-control" id="name" required>
+            </div>
+            <div class="mb-3">
+              <label for="email" class="form-label">Email</label>
+              <input type="email" class="form-control" id="email" required>
+            </div>
+            <div class="mb-3">
+              <label for="message" class="form-label">Message</label>
+              <textarea class="form-control" id="message" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary">Submit</button>
+          </form>
+        </div>
+        <div class="col-md-6 text-center">
+          <h5 class="fw-bold">Location <i class="bi bi-geo-alt"></i></h5>
+          <p> Container Junction HFC Road Community 25, Dawhenya</p>
+          <h5>Email <i class="bi bi-envelope-at"></i> </h5>
+          <p> info@Vineyardchapelint.com</p>
+          <h5>Telephone <i class="bi bi-telephone"></i> </h5>
+          <p>+233(0) 123 456 789</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="bg-dark text-white text-center py-3">
+    <p>&copy; 2024 Vineyard Chapel International. All rights reserved.</p>
+  </footer>
+
+  <style>
+    .hover-zoom:hover {
+      transform: scale(1.05);
+      transition: 0.3s ease-in-out;
+    }
+  </style>
+
+  <script>
+    document.getElementById('contact-form').addEventListener('submit', function (event) {
+      event.preventDefault();
+      alert('Thank you for contacting us!');
+    });
+  </script>
+</body>
+
+</html>
